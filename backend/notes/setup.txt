@@ -1,0 +1,2 @@
+python manage.py makemigrations --settings=config.settings.development
+python manage.py migrate --settings=config.settings.development

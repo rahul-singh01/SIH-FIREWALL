@@ -2,12 +2,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from api.views import ApplicationListCreateAPIView, ApplicationDetailAPIView, PolicyListCreateAPIView, PolicyDetailAPIView, LogListCreateAPIView, LogDetailAPIView, AlertListCreateAPIView, AlertDetailAPIView
-
+from . import views
 # Set up routers for automatic URL routing
 router = routers.DefaultRouter()
 
 # Define URL patterns
 urlpatterns = [
+    path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('api/applications/', ApplicationListCreateAPIView.as_view(), name='application-list-create'),
     path('api/applications/<int:pk>/', ApplicationDetailAPIView.as_view(), name='application-detail'),

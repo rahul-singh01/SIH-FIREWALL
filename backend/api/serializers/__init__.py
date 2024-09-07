@@ -1,22 +1,11 @@
-from rest_framework import serializers
-from .models import Application, Policy, Log, Alert
+from .application_serializers import ApplicationSerializer
+from .policy_serializers import PolicySerializer
+from .log_serializers import LogSerializer
+from .alert_serializers import AlertSerializer
 
-class ApplicationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Application
-        fields = '__all__'
-
-class PolicySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Policy
-        fields = '__all__'
-
-class LogSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Log
-        fields = '__all__'
-
-class AlertSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Alert
-        fields = '__all__'
+__all__ = [
+    'ApplicationSerializer',
+    'PolicySerializer',
+    'LogSerializer',
+    'AlertSerializer',
+]

@@ -3,7 +3,23 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Application, Policy, Log, Alert
 from .serializers import ApplicationSerializer, PolicySerializer, LogSerializer, AlertSerializer
+from django.views.generic import TemplateView
+from django.views.decorators.cache import never_cache
+from django.conf import settings
+from django.shortcuts import render
+import json
 
+# # Serve React App
+# index = never_cache(TemplateView.as_view(template_name='index.html'))
+
+def index(request):
+    if settings.DEBUG:
+        return render(request, 'index.html', {'debug': True})
+    else:
+        manifest_path = settings.STATIC_ROOT / 'dist' / 'manifest.json'
+        with open(manifest_path, 'r') as manifest_file:
+            manifest = json.load(manifest_file)
+        return render(request, 'index.html', {'debug': False, 'manifest': manifest})
 class ApplicationListCreateAPIView(APIView):
     def get(self, request):
         applications = Application.objects.all()

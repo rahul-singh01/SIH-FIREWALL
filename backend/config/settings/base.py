@@ -23,6 +23,10 @@ INSTALLED_APPS = [
     'rest_framework',  # Example: Django REST framework
     'api',  # Your app
     'ml',   # Your app
+    # 'rest_framework',
+    'corsheaders',
+    'sihFirewall',
+    # 'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -33,6 +37,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -59,9 +64,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'mydatabase'),
-        'USER': os.getenv('DB_USER', 'mydatabaseuser'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'mypassword'),
+        'NAME': os.getenv('DB_NAME', 'firewall'),
+        'USER': os.getenv('DB_USER', 'root'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'root'),
         'HOST': os.getenv('DB_HOST', 'localhost'),
         'PORT': os.getenv('DB_PORT', '5432'),
     }
@@ -100,3 +105,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

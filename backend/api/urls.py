@@ -1,13 +1,18 @@
 from django.urls import path
-from . import views
-
-app_name = 'api'
+from .views import (
+    ApplicationListCreateView,
+    ApplicationRetrieveUpdateDestroyView,
+    PolicyListCreateView,
+    PolicyRetrieveUpdateDestroyView,
+    LogListView,
+    AlertListView,
+)
 
 urlpatterns = [
-    path('applications/', views.ApplicationListView.as_view(), name='application_list'),
-    path('applications/<int:pk>/', views.ApplicationDetailView.as_view(), name='application_detail'),
-    path('policies/', views.PolicyListView.as_view(), name='policy_list'),
-    path('policies/<int:pk>/', views.PolicyDetailView.as_view(), name='policy_detail'),
-    path('logs/', views.LogListView.as_view(), name='log_list'),
-    path('alerts/', views.AlertListView.as_view(), name='alert_list'),
+    path('applications/', ApplicationListCreateView.as_view(), name='application-list-create'),
+    path('applications/<int:pk>/', ApplicationRetrieveUpdateDestroyView.as_view(), name='application-retrieve-update-destroy'),
+    path('policies/', PolicyListCreateView.as_view(), name='policy-list-create'),
+    path('policies/<int:pk>/', PolicyRetrieveUpdateDestroyView.as_view(), name='policy-retrieve-update-destroy'),
+    path('logs/', LogListView.as_view(), name='log-list'),
+    path('alerts/', AlertListView.as_view(), name='alert-list'),
 ]
