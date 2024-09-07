@@ -1,1 +1,14 @@
-venv
+# Ignore all __pycache__ directories in the entire project
+**/__pycache__/
+
+# Ignore Python compiled files
+*.py[cod]
+*.pyo
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore other typical Python files
+*.log
+*.sqlite3
