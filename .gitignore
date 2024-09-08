@@ -12,3 +12,4 @@ env/
 # Ignore other typical Python files
 *.log
 *.sqlite3
+node_modules
