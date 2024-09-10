@@ -2,10 +2,11 @@ import requests
 from .config import config
 from .logger import logger
 
+print("Starting API Client")
 class APIClient:
     def __init__(self):
-        self.base_url = config.get('api_url')
-        self.token = config.get('api_token')
+        self.base_url = config.get('http://localhost:8000')
+        # self.token = config.get('api_token')
 
     def get(self, endpoint):
         try:

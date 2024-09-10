@@ -110,6 +110,15 @@ class Daemon:
 
 class FirewallAgentDaemon(Daemon):
     def run(self):
-        from .firewall_agent import LinuxFirewallAgent
-        agent = LinuxFirewallAgent()
-        agent.run()
+        try:
+            logger.info("FirewallAgentDaemon starting...")
+            logger.info(f"Current working directory: {os.getcwd()}")
+            logger.info(f"Pidfile location: {self.pidfile}")
+            
+            from .firewall_agent import LinuxFirewallAgent
+            agent = LinuxFirewallAgent()
+            logger.info("Running LinuxFirewallAgent...")
+            agent.run()
+        except Exception as e:
+            logger.error(f"Error in FirewallAgentDaemon: {str(e)}")
+            logger.exception("Full traceback:")

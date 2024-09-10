@@ -1,0 +1,16 @@
+database:
+  host: localhost  
+  port: 5432  
+  name: firewall
+  user: root  
+  password: root
+  
+logging:
+  level: DEBUG
+  file: /logs/firewall_agent.log
+  
+firewall:
+  default_policy: deny
+  allowed_ports:    
+    - 80    
+    - 443
