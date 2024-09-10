@@ -8,7 +8,7 @@ AI & Blockchain Integration: AI-driven anomaly detection and blockchain for secu
 
 **Team Name:** 404_Sleep
 
-**Team Leader:** [@Jatin Sharma](https://github.com/JatSh1804)
+**Team Leader:** [@Rahul Singh](https://github.com/rahul-singh01)
 
 **Team Members:**
 
