@@ -13,10 +13,10 @@ AI & Blockchain Integration: AI-driven anomaly detection and blockchain for secu
 **Team Members:**
 
 - **MEMBER_1** - 2022UEE4523 - [@Jatin](https://github.com/JatSh1804)
-- **MEMBER_2** - 2022UEE4611 - [@Rahul](https://github.com/Rahulrahul-singh01)
-- **MEMBER_3** - 2022UCA1801 - [@Aditya](https://github.com/Aditya_tiwari)
-- **MEMBER_4** - 2022UIN3320 - [@Vedant](https://github.com/USERNAME)
-- **MEMBER_5** - 2022UEE4513 - [@Akshata](https://github.com/USERNAME)
+- **MEMBER_2** - 2022UEE4611 - [@Rahul](https://github.com/rahul-singh01)
+- **MEMBER_3** - 2022UCA1801 - [@Aditya](https://github.com/adityat1531)
+- **MEMBER_4** - 2022UIN3320 - [@Vedant](https://github.com/VedantG479)
+- **MEMBER_5** - 2022UEE4513 - [@Akshata](https://github.com/akshatac18)
 - **MEMBER_6** - 2022UCM2304 - [@Divyansh](https://github.com/divyanshjain122)
 
 ## Project Links
