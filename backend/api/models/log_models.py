@@ -1,11 +1,9 @@
-# api/models/log_models.py
-
 from django.db import models
 
 class Log(models.Model):
-    timestamp = models.DateTimeField(auto_now_add=True)
-    level = models.CharField(max_length=50)
-    message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)  # Aligning with 'created_at' in SQL
+    level = models.CharField(max_length=50)  # Matches 'level VARCHAR(50) NOT NULL'
+    message = models.TextField()  # Matches 'message TEXT NOT NULL'
 
     def __str__(self):
         return f"[{self.level}] {self.message[:50]}"
@@ -13,4 +11,4 @@ class Log(models.Model):
     class Meta:
         verbose_name = "Log"
         verbose_name_plural = "Logs"
-        ordering = ['-timestamp']
+        ordering = ['-created_at']  # Matches 'created_at TIMESTAMP'

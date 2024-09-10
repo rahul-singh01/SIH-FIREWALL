@@ -2,6 +2,15 @@ import yaml
 import os
 
 class Config:
+    DATABASE_URL = "postgresql://root:root@localhost:5432/firewall"
+    POLICY_CHECK_INTERVAL = 5
+    CHECK_INTERVAL = 5# Check new processes every 5 seconds
+    DATABASE_NAME = 'firewall'
+    DATABASE_USER = 'root'
+    DATABASE_PASSWORD = 'root'
+    DATABASE_HOST = 'localhost'
+    DATABASE_PORT = '5432'
+    DEFAULT_CHAIN_POLICY='input_chain'
     def __init__(self):
         self.config_path = os.path.join(os.path.dirname(__file__), '..', 'config.yaml')
         self.config = self._load_config()

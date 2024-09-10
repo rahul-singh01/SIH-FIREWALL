@@ -2,6 +2,12 @@ import sys
 import os
 import platform
 
+import logging
+logging.basicConfig(filename='/coding/django/SIH_FIREWALL/agent/logs/firewall_agent_main.log', level=logging.DEBUG, 
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+
 def run_windows_agent():
     from windows.firewall_agent import WindowsFirewallAgent
     agent = WindowsFirewallAgent()
@@ -41,6 +47,9 @@ def run_as_service():
 def main():
     os_type = platform.system().lower()
     
+    # #  os_type = platform.system().lower()
+    logger.info(f"Detected OS: {os_type}")
+ 
     if os_type == 'windows':
         if len(sys.argv) > 1 and sys.argv[1] == '--service':
             run_as_service()
@@ -52,5 +61,8 @@ def main():
         print(f"Unsupported operating system: {os_type}")
         sys.exit(1)
 
+   
+        
 if __name__ == "__main__":
+    logger.info("Script started")
     main()

@@ -1,6 +1,12 @@
-asgiref==3.8.1
-Django==5.1
-sqlparse==0.5.1
+asgiref
+Django
+sqlparse
 djangorestframework
 django-cors-headers
 gunicorn
+django-debug-toolbar
+psycopg2
+sqlalchemy
+cryptography
+requests
+psutil

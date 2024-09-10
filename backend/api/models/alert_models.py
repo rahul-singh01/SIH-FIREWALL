@@ -12,8 +12,8 @@ class Alert(models.Model):
 
     level = models.CharField(max_length=10, choices=LEVEL_CHOICES, default='INFO')
     message = models.TextField()
-    timestamp = models.DateTimeField(default=timezone.now)
     resolved = models.BooleanField(default=False)
+    timestamp = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f"[{self.get_level_display()}] {self.message[:50]}"
