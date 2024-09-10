@@ -12,7 +12,7 @@ import {
 import { Link, useLocation } from 'react-router-dom'
 import { ModeToggle } from './mode-toggle'
 
-export function Layout({ children }) {
+export function Layout({ children }: { children: React.ReactNode }) {
   const [activePage, setActivePage] = useState<String | null>(null)
   const [sidebarOpen, setSidebarOpen] = useState(() => {
     const saved = localStorage.getItem('sidebarOpen');
@@ -36,7 +36,9 @@ export function Layout({ children }) {
       `}
       >
         <div className="p-4 flex items-center justify-between">
-          <h1 className={`text-2xl font-bold text-gray-800 dark:text-gray-200 ${sidebarOpen ? 'block' : 'hidden'}`}>Firewall Admin</h1>
+          <Link to="/">
+            <h1 className={`text-2xl font-bold text-gray-800 dark:text-gray-200 ${sidebarOpen ? 'block' : 'hidden'}`}>SecureWall</h1>
+          </Link>
           <Button variant="ghost" size="icon" onClick={() => setSidebarOpen(!sidebarOpen)}
           // className="lg:hidden"
           >
@@ -44,9 +46,9 @@ export function Layout({ children }) {
           </Button>
         </div>
         <nav className="mt-6 p-2 flex flex-col gap-2">
-          <Link to="/">
+          <Link to="/dashboard">
             <Button
-              variant={activePage === '' ? 'default' : 'ghost'}
+              variant={activePage === 'dashboard' ? 'default' : 'ghost'}
               className="w-full justify-start"
             >
               <LayoutDashboard className="h-4 w-4" />

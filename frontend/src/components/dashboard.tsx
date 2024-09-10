@@ -1,8 +1,12 @@
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts'
+// import { BarChart, Bar, , XAxis, YAxis, CartesianGrid, Tooltip, , Pie, Cell, Legend } from 'recharts'
 import { Globe, Shield } from "lucide-react"
+import PieChart from "./ui/piechart"
+import LineChart from "./ui/linechart"
+import { ResponsiveContainer } from "recharts"
+import BarChart from "./ui/barchart"
 
 const mockBarChartData = [
     { name: 'example.com', value: 400 },
@@ -89,13 +93,7 @@ export default function Dashboard() {
                         </CardHeader>
                         <CardContent className="h-[300px]">
                             <ResponsiveContainer width="100%" height="100%">
-                                <BarChart data={mockBarChartData}>
-                                    <CartesianGrid strokeDasharray="3 3" />
-                                    <XAxis dataKey="name" />
-                                    <YAxis />
-                                    <Tooltip />
-                                    <Bar dataKey="value" fill="#8884d8" />
-                                </BarChart>
+                                <BarChart />
                             </ResponsiveContainer>
                         </CardContent>
                     </Card>
@@ -105,15 +103,7 @@ export default function Dashboard() {
                         </CardHeader>
                         <CardContent className="h-[300px]">
                             <ResponsiveContainer width="100%" height="100%">
-                                <LineChart data={mockLineChartData}>
-                                    <CartesianGrid strokeDasharray="3 3" />
-                                    <XAxis dataKey="name" />
-                                    <YAxis />
-                                    <Tooltip />
-                                    <Legend />
-                                    <Line type="monotone" dataKey="blocked" stroke="#8884d8" />
-                                    <Line type="monotone" dataKey="allowed" stroke="#82ca9d" />
-                                </LineChart>
+                                <LineChart />
                             </ResponsiveContainer>
                         </CardContent>
                     </Card>
@@ -124,7 +114,7 @@ export default function Dashboard() {
                     </CardHeader>
                     <CardContent className="h-[300px]">
                         <ResponsiveContainer width="100%" height="100%">
-                            <PieChart>
+                            {/* <PieChart>
                                 <Pie
                                     data={mockPieChartData}
                                     cx="50%"
@@ -140,7 +130,8 @@ export default function Dashboard() {
                                 </Pie>
                                 <Tooltip />
                                 <Legend />
-                            </PieChart>
+                            </PieChart> */}
+                            <PieChart />
                         </ResponsiveContainer>
                     </CardContent>
                 </Card>
