@@ -10,3 +10,14 @@ sqlalchemy
 cryptography
 requests
 psutil
+pywin32; sys_platform == 'win32'
+requests
+cryptography
+python-iptables; sys_platform == 'linux'
+pyyaml
+sqlalchemy
+pandas
+numpy
+scikit-learn
+plotly
+dash
