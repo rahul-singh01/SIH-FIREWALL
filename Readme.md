@@ -4,28 +4,6 @@ monitoring.
 Centralized Management: Web-based console for policy management, monitoring, and alerting.
 AI & Blockchain Integration: AI-driven anomaly detection and blockchain for secure, tamper-proof logging
 
-## Team Details
-
-**Team Name:** 404_Sleep
-
-**Team Leader:** [@Rahul Singh](https://github.com/rahul-singh01)
-
-**Team Members:**
-
-- **MEMBER_1** - 2022UEE4523 - [@Jatin](https://github.com/JatSh1804)
-- **MEMBER_2** - 2022UEE4611 - [@Rahul](https://github.com/rahul-singh01)
-- **MEMBER_3** - 2022UCA1801 - [@Aditya](https://github.com/adityat1531)
-- **MEMBER_4** - 2022UIN3320 - [@Vedant](https://github.com/VedantG479)
-- **MEMBER_5** - 2022UEE4513 - [@Akshata](https://github.com/akshatac18)
-- **MEMBER_6** - 2022UCM2304 - [@Divyansh](https://github.com/divyanshjain122)
-
-## Project Links
-
-- **Presentation:** [Link](https://drive.google.com/file/d/1iMbi1fJGygDrids1jop58OL69gK8omxp/view?usp=drivesdk)
-- **Video Demonstration:** [Watch Video](https://drive.google.com/file/d/1jcJ7MYBInTUQbCeqEVMkWRmlkNHCIdxM/view?usp=drive_link)
-- **Source Code:** [GitHub Repository](https://github.com/rahul-singh01/SIH-FIREWALL/)
-
-
 ## How to run it locally ?
  - on root folder run : pip instal -r requirements.txt
    
